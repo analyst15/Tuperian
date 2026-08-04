@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Calculator, Share2, Terminal, UserCheck } from 'lucide-react';
+import { Code, Calculator, Share2, Terminal, UserCheck, Briefcase, ShieldCheck } from 'lucide-react';
 
 interface TeamMember {
   id: string;
@@ -10,6 +10,13 @@ interface TeamMember {
 }
 
 const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: '0',
+    name: 'Thomas Kuya',
+    role: 'Director',
+    initials: 'TK',
+    icon: Briefcase
+  },
   {
     id: '1',
     name: 'Titus Tum',
@@ -33,6 +40,13 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     id: '4',
+    name: 'Emmanuel Oloishorua',
+    role: 'Risk & Compliance',
+    initials: 'EO',
+    icon: ShieldCheck
+  },
+  {
+    id: '5',
     name: 'John Kantai',
     role: 'Social Media Manager',
     initials: 'JK',
@@ -74,8 +88,8 @@ export const TeamSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* 4 Team Cards Grid (Matching attached layout shape without photos) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-4">
+        {/* Team Cards Grid (3 up 3 down on laptop/desktop screens) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto pt-4">
           {TEAM_MEMBERS.map((member) => {
             const IconComponent = member.icon;
 

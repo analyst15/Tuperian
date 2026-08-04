@@ -1,8 +1,8 @@
 import React from 'react';
 import { Cpu, Layout, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
-export const ABOUT_MAIN_IMAGE = '/src/assets/images/about_engineer_main_1785835581973.jpg';
-export const ABOUT_TEAM_IMAGE = '/src/assets/images/about_team_collaboration_1785835597991.jpg';
+export const ABOUT_MAIN_IMAGE = 'https://firebasestorage.googleapis.com/v0/b/keiyian-farm.firebasestorage.app/o/_6afa53cc-f90a-4b5a-a629-8447e53ddde4.jpeg?alt=media&token=486f60da-d799-4d41-baf9-020977741e3e';
+export const ABOUT_TEAM_IMAGE = 'https://firebasestorage.googleapis.com/v0/b/keiyian-farm.firebasestorage.app/o/_94b6369e-7568-4c37-8d17-30c0cf4e5d91.jpeg?alt=media&token=f759c7c6-043c-4d9c-98db-77ce8995036b';
 
 interface AboutUsProps {
   onOpenConsultation?: () => void;

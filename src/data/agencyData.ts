@@ -1,7 +1,7 @@
 import { ServiceDetail, CaseStudy, PricingPackage, SecurityQuestion } from '../types';
 
 export const HERO_IMAGE = '/src/assets/images/tuperian_hero_tech_1785760405966.jpg';
-export const CONSULTANT_HERO_IMAGE = '/src/assets/images/hero_consultant_person_1785830183999.jpg';
+export const CONSULTANT_HERO_IMAGE = 'https://firebasestorage.googleapis.com/v0/b/keiyian-farm.firebasestorage.app/o/Untitled%20design%20(16).png?alt=media&token=7e4cfd4f-537a-4585-921f-a703e2f7188b';
 export const CYBER_IMAGE = '/src/assets/images/cyber_security_hub_1785760483760.jpg';
 export const DEV_IMAGE = '/src/assets/images/app_web_development_1785760652327.jpg';
 export const DATA_IMAGE = '/src/assets/images/data_analytics_dashboard_1785760710219.jpg';
