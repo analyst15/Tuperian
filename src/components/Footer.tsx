@@ -1,5 +1,4 @@
 import React from 'react';
-import { Shield, CheckCircle2, Lock } from 'lucide-react';
 
 interface FooterProps {
   onNavigateTab: (tab: string) => void;
@@ -12,10 +11,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenConsultatio
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           {/* Brand Col */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
               <img 
                 src="https://firebasestorage.googleapis.com/v0/b/keiyian-farm.firebasestorage.app/o/Tuperian%20black.png?alt=media&token=9214d2bd-3bb3-472b-b80f-96478ce397e1"
@@ -31,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenConsultatio
           </div>
 
           {/* Practice Areas Col */}
-          <div className="space-y-3">
+          <div className="space-y-3 md:col-span-1">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Practice Areas</h4>
             <ul className="space-y-2 text-xs">
               {[
@@ -55,29 +54,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenConsultatio
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Compliance & Certifications */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider">Certifications & Standards</h4>
-            <div className="space-y-2 text-xs text-slate-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>SOC2 Type II Audit Compliant</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-cyan-400 shrink-0" />
-                <span>ISO 27001 Certified Security</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>HIPAA & GDPR Ready</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0" />
-                <span>AWS & Azure Certified Partners</span>
-              </div>
-            </div>
           </div>
 
         </div>
