@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenConsultatio
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
@@ -29,8 +29,32 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateTab, onOpenConsultatio
             </p>
           </div>
 
+          {/* Quick Links Col */}
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider">Quick Links</h4>
+            <ul className="space-y-2 text-xs">
+              {[
+                { label: 'Home', action: () => { window.scrollTo({ top: 0, behavior: 'smooth' }); onNavigateTab('services'); } },
+                { label: 'About Us', action: () => onNavigateTab('about') },
+                { label: 'Our Services', action: () => onNavigateTab('services') },
+                { label: 'Expert Team', action: () => onNavigateTab('team') },
+                { label: 'Book Consultation', action: () => onOpenConsultation() },
+                { label: 'Request a Quote', action: () => onOpenConsultation('Quote Request') }
+              ].map((item, idx) => (
+                <li key={idx}>
+                  <button
+                    onClick={item.action}
+                    className="hover:text-cyan-400 transition-colors cursor-pointer text-slate-400 text-left"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Practice Areas Col */}
-          <div className="space-y-3 md:col-span-1">
+          <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Practice Areas</h4>
             <ul className="space-y-2 text-xs">
               {[
